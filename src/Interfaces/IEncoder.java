@@ -5,6 +5,6 @@ import java.util.Map;
 
 public interface IEncoder {
 
-    void generateCodes(HuffmanNode root, String currentCode, Map<Character, String> codeMap);
+    void generateCodeMap(HuffmanNode root, String currentCode, Map<Character, String> codeMap);
     String encodeText(String text, Map<Character, String> codes);
 }

@@ -11,7 +11,7 @@ public class Encoder implements IEncoder {
 
     @Override
     //generateCodes(root,"", codeMap) şeklinde çağırcam
-    public void generateCodes(HuffmanNode node, String currentCode, Map<Character, String> codeMap) {
+    public void generateCodeMap(HuffmanNode node, String currentCode, Map<Character, String> codeMap) {
         if (node == null) {
             return;
         }
@@ -21,8 +21,8 @@ public class Encoder implements IEncoder {
             return;
         }
 
-        generateCodes(node.getLeft(), currentCode + "0", codeMap); //left 0
-        generateCodes(node.getRight(), currentCode + "1", codeMap); //right 1
+        generateCodeMap(node.getLeft(), currentCode + "0", codeMap); //left 0
+        generateCodeMap(node.getRight(), currentCode + "1", codeMap); //right 1
     }
 
     @Override
